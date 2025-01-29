@@ -1,1 +1,190 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TTV Niliees - Informationen und Teams">
+    <title>TTV Info</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4c1d95;
+            --secondary-color: #1e40af;
+            --accent-color: #5b21b6;
+        }
 
+        body {
+            background: radial-gradient(circle at 50% 40%,
+                var(--primary-color) 0%,
+                var(--secondary-color) 30%,
+                var(--accent-color) 45%,
+                #7c2d12 60%,
+                #fbbf24 75%,
+                #020617 100%
+            );
+            margin: 0;
+            min-height: 100vh;
+            font-family: 'Arial', sans-serif;
+            color: white;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .hover-scale {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hover-scale:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .content-section {
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(5px);
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .team-card {
+            background: rgba(55, 65, 81, 0.7);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid #9147ff;
+            transition: all 0.3s ease;
+        }
+
+        .team-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        h1, h2 {
+            color: #9147ff;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(55, 65, 81, 0.7);
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: rgba(75, 85, 101, 0.9);
+            transform: translateY(-2px);
+        }
+
+        .icon {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- TTV Erklärung -->
+        <div class="content-section hover-scale fade-in">
+            <h1>Was bedeutet TTV?</h1>
+            <p>TTV steht für <strong>Twitch.TV</strong>, die weltweit führende Streaming-Plattform für Gaming und E-Sports. Als aktiver Content Creator streame ich regelmäßig Fortnite und andere Spiele, teile meine Gaming-Erlebnisse und baue eine engagierte Community auf.</p>
+            <p>Der TTV-Zusatz in meinem Namen zeigt meine Präsenz auf Twitch und mein Engagement im Streaming-Bereich.</p>
+        </div>
+
+        <!-- E-Sports Teams -->
+        <div class="content-section hover-scale fade-in">
+            <h2>Meine E-Sports Teams</h2>
+            <div class="team-card">
+                <h3><i class="fas fa-trophy"></i> Team 404</h3>
+                <p>Aktives Mitglied im Fortnite-Competitive-Team</p>
+                <ul>
+                    <li>Teilnahme an wöchentlichen Scrims</li>
+                    <li>Fokus auf Duo- und Trio-Turniere</li>
+                </ul>
+            </div>
+            <div class="team-card">
+                <h3><i class="fas fa-star"></i> Streamers United</h3>
+                <p>Content Creator & Streamer-Team</p>
+                <ul>
+                    <li>Regelmäßige Community-Events</li>
+                    <li>Kollaborationen mit anderen Streamern</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Teams die ich unterstütze -->
+        <div class="content-section hover-scale fade-in">
+            <h2>Teams die ich unterstütze</h2>
+            <div class="team-card">
+                <h3><i class="fas fa-heart"></i> FaZe Clan</h3>
+                <p>Einer der erfolgreichsten E-Sports-Organisationen weltweit</p>
+            </div>
+            <div class="team-card">
+                <h3><i class="fas fa-heart"></i> Team Liquid</h3>
+                <p>Professionelles E-Sports-Team mit beeindruckender Historie</p>
+            </div>
+        </div>
+
+        <!-- Social Links -->
+        <div class="social-links">
+            <a href="https://twitch.tv/niliees" class="social-link" target="_blank">
+                <div class="icon"><i class="fab fa-twitch"></i></div>
+                Twitch
+            </a>
+            <a href="https://twitter.com/niliees" class="social-link" target="_blank">
+                <div class="icon"><i class="fab fa-twitter"></i></div>
+                Twitter
+            </a>
+            <a href="https://discord.gg/Z96TRTcr82" class="social-link" target="_blank">
+                <div class="icon"><i class="fab fa-discord"></i></div>
+                Discord
+            </a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const elements = document.querySelectorAll('.hover-scale');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in');
+                    }
+                });
+            });
+
+            elements.forEach(element => observer.observe(element));
+        });
+    </script>
+</body>
+</html>
