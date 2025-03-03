@@ -3,247 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="TTV Niliees - Informationen und Teams">
-    <title>TTV Info</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>Wartungsarbeiten</title>
     <style>
-        :root {
-            --primary-color: #4c1d95;
-            --secondary-color: #1e40af;
-            --accent-color: #5b21b6;
-        }
-
         body {
-            background: linear-gradient(125deg, 
-                #000000 0%,
-                #1a1a2e 25%,
-                #16213e 50%,
-                #1a1a2e 75%,
-                #000000 100%
-            );
-            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
             margin: 0;
-            min-height: 100vh;
-            font-family: 'Arial', sans-serif;
-            color: white;
-            position: relative;
-            overflow-x: hidden;
-        }
-
-        /* Modern animated background elements */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                radial-gradient(circle at 20% 30%, rgba(75, 0, 130, 0.15) 0%, transparent 40%),
-                radial-gradient(circle at 80% 70%, rgba(138, 43, 226, 0.15) 0%, transparent 40%);
-            pointer-events: none;
-            z-index: -1;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem;
-            position: relative;
-        }
-
-        .fade-in {
-            animation: fadeIn 0.5s ease-in;
-        }
-
-        .hover-scale {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .hover-scale:hover {
-            transform: scale(1.02);
-            box-shadow: 0 4px 20px rgba(138, 43, 226, 0.2);
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .content-section {
-            background: linear-gradient(145deg, rgba(26, 26, 46, 0.9), rgba(22, 33, 62, 0.9));
-            border-radius: 1rem;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            border: 1px solid rgba(138, 43, 226, 0.2);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-        }
-
-        .team-card {
-            background: linear-gradient(145deg, rgba(31, 31, 51, 0.9), rgba(27, 38, 67, 0.9));
-            border-radius: 0.5rem;
-            padding: 1.5rem;
-            margin-bottom: 1rem;
-            border-left: 4px solid #9147ff;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .team-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(145, 71, 255, 0.2);
-        }
-
-        h1, h2 {
-            background: linear-gradient(90deg, #9147ff, #da62c4);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            margin-bottom: 1.5rem;
-        }
-
-        .social-links {
+            padding: 0;
             display: flex;
-            gap: 1rem;
-            margin-top: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .social-link {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: linear-gradient(145deg, rgba(31, 31, 51, 0.9), rgba(27, 38, 67, 0.9));
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.5rem;
-            text-decoration: none;
-            color: white;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(145, 71, 255, 0.2);
-        }
-
-        .social-link:hover {
-            background: linear-gradient(145deg, rgba(41, 41, 61, 0.9), rgba(37, 48, 77, 0.9));
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(145, 71, 255, 0.2);
-        }
-
-        .icon {
-            width: 24px;
-            height: 24px;
-            display: flex;
-            align-items: center;
+            flex-direction: column;
             justify-content: center;
-            color: #9147ff;
-        }
-
-        ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        ul li {
-            margin-bottom: 0.5rem;
-            display: flex;
             align-items: center;
+            height: 100vh;
+            text-align: center;
         }
-
-        ul li::before {
-            content: '►';
-            color: #9147ff;
-            margin-right: 0.5rem;
-            font-size: 0.8em;
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 90%;
         }
-
-        /* Glow effect for important elements */
-        .glow-effect {
-            position: relative;
+        h1 {
+            color: #e74c3c;
+            margin-bottom: 20px;
         }
-
-        .glow-effect::after {
-            content: '';
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
-            background: linear-gradient(45deg, #9147ff, #da62c4);
-            border-radius: 1.1rem;
-            z-index: -1;
-            opacity: 0;
-            transition: opacity 0.3s ease;
+        .icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+            color: #e74c3c;
         }
-
-        .glow-effect:hover::after {
-            opacity: 0.3;
+        p {
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+        .date {
+            font-weight: bold;
+            background-color: #f8f8f8;
+            display: inline-block;
+            padding: 10px 15px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- TTV Erklärung -->
-        <div class="content-section hover-scale fade-in glow-effect">
-            <h1>Was bedeutet TTV?</h1>
-            <p>TTV steht für <strong>Twitch.TV</strong>, die weltweit führende Streaming-Plattform für Gaming und E-Sports. Als aktiver Content Creator streame ich regelmäßig Fortnite und andere Spiele, teile meine Gaming-Erlebnisse und baue eine engagierte Community auf.</p>
-            <p>Der TTV-Zusatz in meinem Namen zeigt meine Präsenz auf Twitch und mein Engagement im Streaming-Bereich.</p>
-        </div>
-
-        <!-- E-Sports Teams -->
-        <div class="content-section hover-scale fade-in glow-effect">
-            <h2>Meine E-Sports Teams</h2>
-            <div class="team-card">
-                <h3><i class="fas fa-trophy"></i>404</h3>
-                <p>Gründer von 404 E-sports</p>
-                <ul>
-                    <li>Tourniere jeden Samstag im DC</li>
-                    <li>Fokus auf Solo- und Duo-Turniere</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Teams die ich unterstütze -->
-        <div class="content-section hover-scale fade-in glow-effect">
-            <h2>Teams die ich unterstütze</h2>
-            <div class="team-card">
-                <h3><i class="fas fa-heart"></i> HTE</h3>
-                <p>Half-Time Gaming Valorant E-Sports</p>
-            </div>
-        </div>
-
-        <!-- Social Links -->
-        <div class="social-links">
-            <a href="https://twitch.tv/niliees" class="social-link" target="_blank">
-                <div class="icon"><i class="fab fa-twitch"></i></div>
-                Twitch
-            </a>
-            <a href="https://twitter.com/niliees" class="social-link" target="_blank">
-                <div class="icon"><i class="fab fa-twitter"></i></div>
-                Twitter
-            </a>
-            <a href="https://discord.gg/Z96TRTcr82" class="social-link" target="_blank">
-                <div class="icon"><i class="fab fa-discord"></i></div>
-                Discord
-            </a>
-            <a href="https://nsce.fr" class="social-link" target="_blank">
-                <div class="icon"><i class="fas fa-home"></i></div>
-                Main Website
-            </a>
-        </div>
+        <div class="icon">🚧</div>
+        <h1>Diese Website wird bald nicht verfügbar sein</h1>
+        <p>Sehr geehrte Besucher,</p>
+        <p>wir möchten Sie darüber informieren, dass diese Website demnächst wegen umfangreicher Bauarbeiten und Aktualisierungen vorübergehend nicht erreichbar sein wird. Wir arbeiten daran, Ihnen in Kürze ein verbessertes Nutzererlebnis bieten zu können.</p>
+        <p>Wir danken Ihnen für Ihr Verständnis und Ihre Geduld während dieser Zeit.</p>
+        <p>Bei Fragen können Sie uns gerne unter <strong>support@niliees.dev</strong> kontaktieren.</p>
+        <div class="date">Voraussichtliche Fertigstellung: Mitte März </div>
     </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const elements = document.querySelectorAll('.hover-scale');
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('fade-in');
-                    }
-                });
-            });
-
-            elements.forEach(element => observer.observe(element));
-        });
-    </script>
 </body>
 </html>
